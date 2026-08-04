@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AfricaWILL | Bridging Cultures, Building Leaders</title>
+<meta name="description" content="AfricaWILL, the African Women's Innovation of Leadership and Learning, empowers women across Africa through leadership development and transformative learning.">
+
+<meta property="og:title" content="AfricaWILL">
+<meta property="og:description" content="Bridging cultures, building leaders. Empowering women across Africa through leadership development and transformative learning.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="logo.png">
+<link rel="icon" href="logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --navy:#2b354a;
+    --navy-deep:#222a3b;
+    --gold-dark:#a98143;
+    --gold:#d0b870;
+    --gold-light:#f3e998;
+    --white:#ffffff;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+
+  body{
+    font-family:'Open Sans',system-ui,sans-serif;
+    background:var(--navy);
+    color:var(--white);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  /* Signature: the metallic sweep from the mark, drawn flat */
+  .sweep{
+    height:4px;
+    flex-shrink:0;
+    background:linear-gradient(90deg,
+      var(--gold-dark) 0%, var(--gold) 22%,
+      var(--gold-light) 50%, var(--gold) 78%, var(--gold-dark) 100%);
+  }
+
+  main{
+    position:relative;
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:56px 24px 64px;
+    isolation:isolate;
+  }
+
+  /* The continent, sitting behind everything */
+  .continent{
+    position:absolute;
+    z-index:-1;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    height:min(118%,860px);
+    width:auto;
+    pointer-events:none;
+    opacity:.5;
+  }
+
+  .continent path{fill:url(#landsweep)}
+
+  .panel{
+    width:100%;
+    max-width:640px;
+    text-align:center;
+  }
+
+  .mark{
+    display:block;
+    width:100%;
+    max-width:400px;
+    height:auto;
+    margin:0 auto 14px;
+  }
+
+  .eyebrow{
+    display:inline-block;
+    font-family:'Ubuntu',sans-serif;
+    font-size:.7rem;
+    font-weight:500;
+    letter-spacing:.24em;
+    text-transform:uppercase;
+    color:var(--gold);
+    background:rgba(43,53,74,.72);
+    border:1px solid rgba(208,184,112,.4);
+    border-radius:2px;
+    padding:7px 18px;
+    margin-bottom:38px;
+  }
+
+  .rule{
+    width:48px;height:2px;border:0;
+    background:var(--gold-dark);
+    margin:34px auto;
+  }
+
+  .lede{
+    font-size:1.05rem;
+    color:rgba(255,255,255,.9);
+    max-width:52ch;
+    margin:0 auto 40px;
+    text-shadow:0 1px 12px rgba(43,53,74,.9);
+  }
+
+  .cta{
+    display:inline-block;
+    font-family:'Ubuntu',sans-serif;
+    font-weight:500;
+    font-size:.92rem;
+    letter-spacing:.05em;
+    text-decoration:none;
+    color:var(--navy);
+    background:linear-gradient(100deg,var(--gold-dark),var(--gold-light),var(--gold-dark));
+    background-size:200% 100%;
+    background-position:0 0;
+    padding:15px 34px;
+    border-radius:2px;
+    transition:background-position .5s ease,transform .18s ease;
+  }
+
+  .cta:hover,.cta:focus-visible{background-position:100% 0;transform:translateY(-2px)}
+  a:focus-visible{outline:2px solid var(--gold-light);outline-offset:3px}
+
+  footer{
+    position:relative;
+    background:var(--navy-deep);
+    padding:34px 24px;
+    text-align:center;
+  }
+
+  .social{display:flex;justify-content:center;gap:18px;margin-bottom:22px}
+
+  .social a{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:40px;height:40px;border-radius:50%;
+    border:1px solid rgba(208,184,112,.35);
+    color:var(--gold);
+    transition:background .18s ease,color .18s ease,border-color .18s ease;
+  }
+
+  .social a:hover{background:var(--gold);border-color:var(--gold);color:var(--navy)}
+  .social svg{width:17px;height:17px;fill:currentColor}
+
+  .legal{
+    font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;
+    color:rgba(255,255,255,.55);
+  }
+  .legal a{color:rgba(255,255,255,.75);text-decoration:none}
+  .legal a:hover{color:var(--gold);text-decoration:underline}
+
+  @media (max-width:560px){
+    .mark{max-width:290px}
+    main{padding:40px 20px 48px}
+    .continent{height:min(104%,560px);opacity:.4}
+  }
+
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="sweep" aria-hidden="true"></div>
+
+<main>
+
+  <svg class="continent" viewBox="0 0 1000 1050" xmlns="http://www.w3.org/2000/svg"
+       aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet">
+    <defs>
+      <linearGradient id="landsweep" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%"   stop-color="#a98143" stop-opacity=".30"/>
+        <stop offset="45%"  stop-color="#d0b870" stop-opacity=".22"/>
+        <stop offset="100%" stop-color="#f3e998" stop-opacity=".12"/>
+      </linearGradient>
+    </defs>
+    <path fill-rule="evenodd" d="M0.0 329.0L6.4 326.1L13.4 316.0L16.9 308.5L15.6 300.7L19.7 293.4L21.5 279.8L18.1 258.2L19.5 251.0L15.8 244.1L8.2 237.8L9.5 224.9L15.1 220.9L19.7 213.6L18.9 208.4L23.9 198.2L32.0 188.9L36.9 186.5L40.7 178.1L41.1 170.4L46.3 161.4L56.0 156.0L65.2 141.2L72.8 135.4L86.5 133.7L105.1 120.0L117.0 108.1L113.6 89.8L121.1 69.6L130.4 59.8L155.8 47.1L170.1 23.1L180.8 23.2L189.7 29.3L203.4 28.4L224.6 31.7L238.8 23.8L254.5 21.2L263.7 15.3L277.7 10.8L326.3 7.1L333.7 9.2L347.4 3.5L362.9 3.4L369.0 6.7L378.7 5.9L394.6 0.0L404.8 1.7L405.1 8.6L416.7 3.8L417.8 6.5L410.5 13.9L410.5 20.3L415.4 24.0L413.5 36.6L404.2 43.9L406.8 51.7L414.2 52.1L417.9 58.9L423.5 61.3L440.4 66.2L446.6 65.0L458.7 67.4L478.1 74.0L485.0 86.9L518.4 95.8L533.7 102.9L541.0 99.3L547.8 92.7L544.6 81.4L549.2 74.3L559.6 67.5L569.6 65.5L589.3 68.5L594.4 75.0L618.8 79.3L622.5 84.0L641.7 83.8L676.7 94.2L694.0 85.5L706.8 84.3L717.2 86.1L721.2 92.5L724.5 88.6L747.4 92.8L754.7 89.2L764.2 114.1L753.1 138.6L749.7 141.1L738.3 129.9L727.3 109.6L732.4 125.7L752.4 163.1L775.4 195.2L772.6 198.0L773.1 207.2L792.5 223.2L797.2 237.5L794.1 240.5L796.1 255.1L801.5 272.4L815.0 281.4L823.4 298.3L827.5 311.7L855.2 332.5L886.3 363.0L885.9 369.0L878.6 372.4L883.8 376.5L875.5 389.4L886.0 404.4L891.7 409.7L939.0 426.8L951.2 426.8L968.0 405.7L968.2 377.3L987.2 373.4L994.2 368.4L999.7 368.3L1000.0 372.3L998.7 388.4L991.5 409.4L975.6 444.2L963.1 465.6L933.5 501.7L883.7 538.9L867.8 556.5L861.1 567.7L851.0 573.5L847.4 579.6L842.0 580.8L839.8 590.9L835.2 596.7L832.3 606.4L826.4 611.4L819.8 629.0L820.6 637.0L829.9 642.7L830.4 646.5L826.4 655.3L826.3 666.6L837.3 689.9L842.7 693.3L845.0 699.8L846.8 749.6L849.4 756.9L839.4 777.4L830.1 786.4L800.4 799.0L784.0 814.6L762.3 831.1L761.1 841.4L767.9 852.3L771.0 864.5L773.5 864.5L773.1 878.7L770.9 885.2L774.2 888.0L772.0 894.0L765.9 899.2L736.6 911.9L730.4 917.2L731.4 923.3L735.0 924.5L728.4 954.8L724.7 961.3L711.9 970.8L693.4 996.1L666.7 1019.8L655.7 1026.5L633.3 1032.9L631.3 1036.9L622.5 1034.8L615.2 1037.5L599.6 1034.7L584.6 1035.7L557.2 1043.8L548.2 1049.2L541.6 1049.6L535.5 1044.5L530.6 1044.1L525.1 1038.5L523.6 1039.7L521.7 1035.8L521.7 1027.2L517.0 1017.5L521.7 1014.6L521.3 1003.6L494.1 958.8L483.2 947.8L477.5 937.2L465.9 890.1L463.7 864.9L450.5 846.8L439.7 820.2L427.9 806.0L425.6 785.7L427.6 772.9L438.1 740.2L454.6 718.2L455.4 699.5L451.0 694.1L443.6 676.5L448.7 667.4L441.5 644.0L434.2 634.7L435.4 631.7L429.6 616.5L393.1 574.4L384.3 559.4L394.2 529.1L391.7 526.3L398.7 498.7L393.2 489.1L386.5 486.4L383.5 480.0L379.8 477.8L379.2 474.2L364.9 479.0L359.3 478.3L353.7 481.5L342.1 481.2L334.3 472.1L329.5 461.6L319.0 452.0L283.4 453.9L227.8 474.7L214.8 470.6L188.8 468.0L171.4 470.6L147.0 480.1L140.3 479.8L125.4 472.9L90.1 444.6L75.6 437.6L68.0 429.8L63.6 413.6L51.7 399.5L44.3 394.6L40.6 385.1L28.5 376.6L22.4 375.6L18.9 369.2L14.7 366.2L11.4 351.9L13.1 345.2L7.3 334.2L0.0 329.0ZM885.4 864.0L888.0 853.5L894.6 850.9L894.7 846.2L901.7 835.0L903.0 825.9L896.9 809.8L895.7 796.4L900.8 788.3L902.7 779.0L929.9 772.6L950.1 755.5L954.4 748.2L952.5 741.9L959.1 743.2L966.6 733.7L967.0 724.8L971.8 718.3L980.7 730.8L984.3 740.4L986.7 757.8L990.4 764.7L986.4 775.9L981.9 768.3L978.9 771.5L981.5 782.5L980.2 788.6L976.2 792.2L975.3 804.3L941.3 905.9L916.7 915.5L896.8 906.6L892.8 898.9L891.9 886.1L886.7 874.5L885.4 864.0Z"/>
+  </svg>
+
+  <div class="panel">
+
+    <img src="logo.png" class="mark"
+         alt="AfricaWILL. The African Women's Innovation of Leadership and Learning. Bridging cultures, building leaders.">
+
+    <span class="eyebrow">More coming soon</span>
+
+    <hr class="rule">
+
+    <p class="lede">
+      Welcome to AfricaWILL, empowering women across Africa through leadership
+      development and transformative learning. Our pan-African network cultivates
+      the next generation of women leaders through mentorship, skill-building,
+      and collaborative growth.
+    </p>
+
+    <a class="cta" href="http://zamwill.org">Visit our Zambia chapter, ZamWILL</a>
+
+  </div>
+</main>
+
+<footer>
+  <div class="social">
+    <!-- Replace each # with your real page address, or delete the link entirely -->
+    <a href="#" aria-label="AfricaWILL on Facebook">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7H7.9v-2.9h2.54V9.85c0-2.52 1.5-3.91 3.77-3.91 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.89h2.78l-.45 2.9h-2.33v7C18.34 21.21 22 17.06 22 12.06z"/></svg>
+    </a>
+    <a href="#" aria-label="AfricaWILL on Instagram">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.8 3.8 0 01-1.38-.9 3.8 3.8 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 3.68A6.16 6.16 0 1018.16 12 6.16 6.16 0 0012 5.84zm0 10.16A4 4 0 1116 12a4 4 0 01-4 4zm6.4-10.4a1.44 1.44 0 11-1.44-1.44 1.44 1.44 0 011.44 1.44z"/></svg>
+    </a>
+    <a href="#" aria-label="AfricaWILL on X">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.65l-5.21-6.82-5.97 6.82H1.68l7.73-8.84L1.25 2.25h6.82l4.71 6.23zm-1.16 17.52h1.83L7.01 4.13H5.04z"/></svg>
+    </a>
+  </div>
+
+  <p class="legal">
+    Copyright &copy;2026,
+    <a href="https://www.islandhousepro.com/" target="_blank" rel="noopener">Island House Productions.</a>
+    All rights reserved.
+  </p>
+</footer>
+
+</body>
+</html>
